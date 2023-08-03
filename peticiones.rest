@@ -1,6 +1,6 @@
 @host = http://localhost:3000
 
-GET {{host}}/api/all
+GET {{host}}/api
 
 ###
 POST {{host}}/api/new
