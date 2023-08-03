@@ -7,10 +7,10 @@ POST {{host}}/api/new
 Content-Type: application/json
 
 {
-    "nombre": "Lorenzo",
-    "apellidos": "López Rodríguez",
-    "edad": 29,
-    "tratamiento": 60
+    "name": "Sonia",
+    "surname": "Amenábar",
+    "age": 34,
+    "tratement": 92
 }
 
 ###

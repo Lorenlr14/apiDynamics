@@ -1,13 +1,23 @@
 const router = require('express').Router();
 
-router.get('/all', (req, res) => {
-    res.json('Recupero todos los usuarios');
+const User = require('../models/user.model');
+
+router.get('/all', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (err) {
+        res.json({ fatal: err.message });
+    }
 });
 
-router.post('/new', (req, res) => {
-    console.log(req.body);
-
-    res.json('Se crea un nuevo usuario');
+router.post('/new', async (req, res) => {
+    try {
+        const result = await User.create(req.body);
+        res.json(result);
+    } catch (err) {
+        res.json({ fatal: err.message });
+    }
 });
 
 router.delete('/:userId', (req, res) => {
