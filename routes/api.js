@@ -20,10 +20,14 @@ router.post('/new', async (req, res) => {
     }
 });
 
-router.delete('/:userId', (req, res) => {
-    const { userId } = req.params;
-
-    res.json('Borramos el usuario ' + userId);
+router.delete('/:userId', async (req, res) => {
+    try {
+        const { userId } = req.params;
+        const result = await User.findByIdAndDelete(userId);
+        res.json(result);
+    } catch (err) {
+        res.json({ fatal: err.message });
+    }
 });
 
 module.exports = router;

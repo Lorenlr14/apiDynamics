@@ -7,11 +7,8 @@ POST {{host}}/api/new
 Content-Type: application/json
 
 {
-    "name": "Sonia",
-    "surname": "Amenábar",
-    "age": 34,
-    "tratement": 92
+    "name": "Marta",
+    "surname": "Soriano",
+    "age": 22,
+    "tratement": 100
 }
-
-###
-DELETE {{host}}/api/1

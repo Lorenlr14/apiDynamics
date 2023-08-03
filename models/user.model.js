@@ -5,6 +5,6 @@ const userSchema = new Schema({
     surname: String,
     age: Number,
     tratement: Number
-});
+}, { timestamps: true, versionKey: false });
 
 module.exports = model('user', userSchema);
