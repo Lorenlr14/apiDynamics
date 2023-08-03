@@ -1,9 +1,17 @@
 @host = http://localhost:3000
 
-GET {{host}}/users/all
+GET {{host}}/api/all
 
 ###
-POST {{host}}/users/new
+POST {{host}}/api/new
+Content-Type: application/json
+
+{
+    "nombre": "Lorenzo",
+    "apellidos": "López Rodríguez",
+    "edad": 29,
+    "tratamiento": 60
+}
 
 ###
-DELETE {{host}}/users/borrado
+DELETE {{host}}/api/1
