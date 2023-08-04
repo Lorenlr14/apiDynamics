@@ -1,9 +1,9 @@
-@host = http://localhost:3000
+@host = http://localhost:3000/api
 
-GET {{host}}/api
+GET {{host}}
 
 ###
-POST {{host}}/api/new
+POST {{host}}/new
 Content-Type: application/json
 
 {
